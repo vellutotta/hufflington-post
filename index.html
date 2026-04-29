@@ -15,8 +15,8 @@
         <div class="barra-superiore">
         <div class="icone-sinistra">
 
-            <span><img src="https://placehold.co/25x25/png" alt="Menu" class="icona-img" id="btn-apri-menu"></span>
-            <span><img src="https://placehold.co/20x20/png" alt="Notifica" class="icona-img" id="notifBtn"></span>
+            <span><img src="https://placehold.co/25x25/png" alt="Menu" class="icona-img" id="btn-apri-menu" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Apri menu navigazione"></span>
+            <span><img src="https://placehold.co/20x20/png" alt="Notifica" class="icona-img" id="notifBtn" aria-haspopup="true" aria-expanded="false" aria-label="Vedi notifiche"></span>
             <a href="#"><span><img src="https://placehold.co/20x20/png" alt="Cerca" class="icona-img"></span></a>
             <a href="#"><span class="mini-logo-navbar">LOREM</span></a>
         </div>
@@ -32,7 +32,7 @@
         
         <div class="tasti-destra">
             <span class="giornalismo">Nunc egestas rutrum</span>
-            <a href="#" class="btn-supporto">IN AT IMPERDIET</a>
+            <a href="#" class="btn-supporto" role="button">IN AT IMPERDIET</a>
             <a href="#" class="log-in">Donec Quis</a>
 
         </div>
@@ -782,16 +782,16 @@
       <div class="footer-colonna principali">
         <a href="#">ELEIFEND</a>
         <a href="#">MAURIS</a>
-        <a href="#">CRAS SOLLICITUDIN</a>
+        <a href="#">CRASOLLICITUDIN</a>
       </div>
       <div class="footer-colonna principali">
         <a href="#">RISUS</a>
         <a href="#">DONEC</a>
-        <a href="#">EGET ULLAMCORPER</a>
+        <a href="#">EGETULLAMCORPER</a>
       </div>
       <div class="footer-colonna principali">
         <a href="#">GRAVIDA</a>
-        <a href="#">MALESUADA NIBHI</a>
+        <a href="#">MALESUADANIBHI</a>
       </div>
 
       <div class="footer-colonna secondari">
@@ -810,7 +810,7 @@
         <a href="#">EGET</a>
         <a href="#">SED FINIBUSLEO</a>
         <a href="#">NEQUE</a>
-        <a href="#">LECTUS ELEMENTUS</a>
+        <a href="#">LECTUSELEMENTUS</a>
       </div>
       <div class="footer-colonna secondari">
         <a href="#">NEC ORNARE QUISQUE EST</a>
@@ -829,12 +829,12 @@
 
 
 
- <div id="overlay-menu" class="menu-overlay"></div>
+ <div id="overlay-menu" class="menu-overlay" aria-hidden="true"></div>
 
-<div id="menu-laterale" class="menu-sidebar">
+<div id="menu-laterale" class="menu-sidebar" role="navigation" aria-label="Menu principale">
     
     <div class="menu-header">
-        <span id="btn-chiudi-menu" class="icona-chiudi">X</span>
+        <span id="btn-chiudi-menu" class="icona-chiudi" role="button" aria-label="Chiudi menu" tabindex="0">X</span>
         <a href="#"><span class="menu-edizione">Lorem Ipsium</span></a>
     </div>
 
@@ -842,7 +842,7 @@
         
         <div class="menu-categoria">
             <a href="#"><h3>PURUS</h3></a>
-            <div class="menu-links-doppi">
+            <div class="menu-links-doppi" role="group">
                 <div class="colonna-link">
                     <a href="#">Tristique</a>
                     <a href="#">Curabitur</a>
@@ -862,10 +862,10 @@
 
 
 
-<div id="notifPanel" class="notif-panel">
+<div id="notifPanel" class="notif-panel" role="region" aria-label="Pannello notifiche" aria-live="polite">
   <div class="notif-header">
     <span>Ipsium</span>
-    <button id="closeNotif">✕</button>
+    <button id="closeNotif" aria-label="Chiudi notifiche">✕</button>
   </div>
 
   <div class="notif-item">
@@ -921,17 +921,23 @@
         event.preventDefault();
         menulaterale.classList.add('aperto');
         overlay.classList.add('attivo');
+
+        document.body.classList.add('menu-aperto');
+
+        btnApri.setAttribute('aria-expanded', 'true');
     });
 
     btnChiudi.addEventListener('click', function(event) {
         event.preventDefault();
         menulaterale.classList.remove('aperto');
         overlay.classList.remove('attivo');
+        document.body.classList.remove('menu-aperto');
     });
 
     overlay.addEventListener('click', function() {
         menulaterale.classList.remove('aperto');
         overlay.classList.remove('attivo');
+        document.body.classList.remove('menu-aperto');
     });
 
 
