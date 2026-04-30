@@ -537,79 +537,8 @@ body.menu-aperto{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-/*
-.footer{
-    background-color: #015247;
-    color: white;
-    padding: 50px 100px 15px 100px;
-    font-family: Arial, sans-serif;
-}
-.footer-principale{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-.footer-logo a{
-    text-decoration: none;
-    color: white;
-}
-.footer-logo h2 {
-  font-family: 'Arial Black', 'Segoe UI Black', sans-serif;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 900;
-  margin: 0;
-  letter-spacing: -1px;
-  
-}
-.footer-links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 15px;
-    margin-bottom: 40px;
-}
-.footer-colonna {
-  display: flex;
-  flex-direction: column; 
-  gap: 15px; 
-}
-.footer-colonna a {
-  color: rgb(205, 197, 205);
-  text-decoration: none;
-  font-size: 13px;
-  transition: text-decoration 0.2s;
 
-}
-.footer-colonna a:hover {
-  color: white;
-}
-.footer-colonna.principali a {
-  font-weight: 700;
-}
-.footer-colonna.secondari a {
-  font-weight: 400;
-  opacity: 0.9;
-  font-size: 12px;
-}
-.footer-copyright {
-   
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.3); 
-  padding-top: 20px;
-  font-size: 12px;
-  opacity: 0.9;
-}
-.footer-copyright p {
-  margin: 0;
-}
 
-.footer-copyright .huff-bold {
-  font-weight: bold;
-}
-  */
  
 .footer{
     background-color: #015247;
@@ -651,18 +580,18 @@ body.menu-aperto{
     margin-bottom: 30px;
 }
 .gruppo-principali {
-    column-count: 3; /* Su desktop 3 colonne */
-    column-gap: 15px; /* Distanza orizzontale */
+    column-count: 3; 
+    column-gap: 15px; 
 }
 
 .gruppo-secondari {
-    column-count: 4; /* Su desktop 4 colonne */
+    column-count: 4; 
     column-gap: 5px;
 }
  .gruppo-principali a, .gruppo-secondari a {
-    display: block; /* Obbliga i link a impilarsi in verticale */
-    margin-bottom: 20px; /* Sostituisce il gap verticale */
-    break-inside: avoid; /* Evita che una parola venga tagliata a metà colonna */
+    display: block;  
+    margin-bottom: 20px; 
+    break-inside: avoid; 
     text-decoration: none;
     transition: text-decoration 0.2s;
 }
@@ -960,6 +889,9 @@ body.menu-aperto .footer{
         margin-bottom: 15px;
         font-size: 11px;
     }
+    .gruppo-principali a:hover, .gruppo-secondari a:hover {
+        color: white;
+    }
 
     .barra-superiore.scrolled .icone-sinistra span:nth-of-type(2), 
     .barra-superiore.scrolled .icone-sinistra a:nth-of-type(1) {
@@ -1171,9 +1103,17 @@ body.menu-aperto .footer{
         line-height: 1.2;
         margin: 0;
     }
-    .footer { padding: 30px 20px 20px 20px; }
-    .footer-principale { align-items: center; }
-    .footer-logo { text-align: center; width: 100%; margin-bottom: 20px; }
+    .footer { 
+        padding: 30px 20px 20px 20px; 
+    }
+    .footer-principale { 
+        align-items: center; 
+    }
+    .footer-logo { 
+        text-align: center; 
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
     
     
     .gruppo-principali,
@@ -1186,6 +1126,9 @@ body.menu-aperto .footer{
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+    .gruppo-principali a:hover, .gruppo-secondari a:hover {
+        color: white;
     }
     
     
